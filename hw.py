@@ -1,17 +1,17 @@
 class Vehicle:
 
-    def __init__(self, owner, __model, __color, __engine_power):
+    def __init__(self, owner, model, color, engine_power):
         self.owner = owner
-        self.model = __model
-        self.engine_power = __engine_power
-        self.color = __color
+        self.__model = model
+        self.__engine_power = engine_power
+        self.color = color
         self.cv = _COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
     def get_model(self):
-        return self.model
+        return self.__model
 
     def get_horsepower(self):
-        return self.engine_power
+        return self.__engine_power
 
     def get_color(self):
         return self.color
