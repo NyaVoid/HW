@@ -1,4 +1,4 @@
-def decorator_function(func):
+def is_prime(func):
     def wrapper(a, b, c):
         n = a + b + c
         primes = [i for i in range(n + 1)]
@@ -20,7 +20,7 @@ def decorator_function(func):
         func(a, b, c)
     return wrapper
 
-@decorator_function
+@is_prime
 def sum_three(a, b, c):
     print(a + b + c)
 sum_three(2, 3, 6)
