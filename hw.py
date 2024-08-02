@@ -1,6 +1,5 @@
 import queue
 import threading
-import random
 from time import sleep
 
 class Customers(threading.Thread):
