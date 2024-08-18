@@ -8,11 +8,12 @@ def read_info(name):
         
 filenames = [f'./file {number}.txt' for number in range(1, 5)]
 
-time_s1 = time.time()
-for i in filenames:
-    mp.Process(target=read_info, args=(i,)).start()
-time_done1 = time.time() - time_s1
-print(f'многопроцессный вызов: {time_done1}')
+if __name__ == '__main__':
+    time_s1 = time.time()
+    for i in filenames:
+        mp.Process(target=read_info, args=(i,)).start()
+    time_done1 = time.time() - time_s1
+    print(f'многопроцессный вызов: {time_done1}')
 
 time_s = time.time()
 for i in filenames:
