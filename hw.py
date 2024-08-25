@@ -19,7 +19,7 @@ print(f'линейный вызов: {time_done}')
 
 if __name__ == '__main__':
     time_s1 = time.time()
-    with Pool() as p:
+    with Pool(process=4) as p:
         p.map(read_info, filenames)
     time_done1 = time.time() - time_s1
     print(f'многопроцессный вызов: {time_done1}')
