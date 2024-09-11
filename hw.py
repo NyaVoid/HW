@@ -1,5 +1,6 @@
-import time
 import asyncio
+
+
 async def strong_man(name, power):
     list = [1, 2, 3, 4, 5]
     for ball in list:
@@ -8,6 +9,7 @@ async def strong_man(name, power):
         print(f'Силач {name}, поднял {ball}')
     print(f'Силач {name}, закончил соревнование')
 
+
 async def start_tournament():
     a = asyncio.create_task(strong_man('nya', 5))
     b = asyncio.create_task(strong_man('not nya', 2))
@@ -15,5 +17,6 @@ async def start_tournament():
     await a
     await b
     await c
+
 
 asyncio.run(start_tournament())
