@@ -6,7 +6,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher.filters import Text
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-API_TOKEN = 'ваш_токен_здесь'
+API_TOKEN = 'token'
 
 logging.basicConfig(level=logging.INFO)
 
